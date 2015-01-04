@@ -25,6 +25,10 @@ EEPROM use
 The code uses the first two memory locations in EEPROM to store the device
 address.
 
+Precompiled HEX
+---------------
+If all you need is a hex file, there is a precompiled .hex file in dist/default/production.
+
 EnviR Output
 ------------
 The output from the EnviR should be something like:
