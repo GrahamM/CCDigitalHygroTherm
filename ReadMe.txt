@@ -20,6 +20,15 @@ for about a year on the same set of AA batteries.
 See EnviR Output to understand how the sensor values are transmitted, and how
 to intepret the output from the EnviR.
 
+Wiring
+------
+See the image DHT22_example.png first. Some changes to the board are needed
+for the sensor to operate properly. You need to remove R10 (a pulldown) from
+the board. Then, you will need to place a 5K resistor (a pullup) between VCC
+and SIG. You can take GND from where R10 used to live. VCC, SIG and GND all
+need to be connected to the correct lines on the DHT22 sensor.
+
+
 EEPROM use
 ----------
 The code uses the first two memory locations in EEPROM to store the device
@@ -27,7 +36,9 @@ address.
 
 Precompiled HEX
 ---------------
-If all you need is a hex file, there is a precompiled .hex file in dist/default/production.
+If all you need is a hex file, there is a precompiled .hex file 
+(PIC16-CurrentCost-HygroTherm-Framework.X.production.hex) in the 
+dist/default/production directory.
 
 EnviR Output
 ------------
