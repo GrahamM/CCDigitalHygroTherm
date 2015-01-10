@@ -45,11 +45,11 @@ EnviR Output
 The output from the EnviR should be something like:
 <msg><src>CC128-v1.29</src><dsb>00759</dsb><time>19:09:09</time><tmpr>20.7</tmpr><sensor>8</sensor><id>12345</id><type>4</type><imp>0989912344</imp><ipu>0001</ipu></msg>
 
-The <imp> value is a combination of temperature and humidity. The first 16
-bits of the value are the temperature in 0.1 of a degree C. The next 8 bits
-are the humidity in %. The last 8 bits are a checksum. This checksum should
-have the same value as the adding together the most significat three bytes
-and ANDing with 0xFF.
+The <imp> value is a combination of humidity, temperature and a checksum.
+The first 8 bits are the checksum, the next 16 bits of the value are the
+temperature in 0.1 of a degree C. The last 8 bits are the humidity in %. 
+This checksum should have the same value as the adding together the three
+data bytes and ANDing with 0xFF.
 
 Notes
 -----
